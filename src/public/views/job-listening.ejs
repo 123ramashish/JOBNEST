@@ -1,0 +1,155 @@
+<link rel="stylesheet" href="../css/job-listening.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/solid.min.js"
+/>
+
+<link rel="stylesheet" href="../css/application-list.css" />
+<div class="job-apply-container">
+  <img src="https://files.codingninjas.com/web-banner-28759.png" alt="" />
+  <div class="container">
+    <h1 style="color: #1c8956">
+      <span style="color: #da3545">SDE </span> opportunity in <%=
+      job.joblocation %> <%= job.jobcategory %> <%= job.jobdestination %>
+      <span style="color: #47d7f4"><%= job.companyname %></span>
+    </h1>
+    <h2 class="text-white"><%= job.companyname %></h2>
+    <h4 class="text-white">
+      Tech <span style="color: #1c8956"><%= job.jobcategory %></span>
+    </h4>
+    <div class="icon-para">
+      <p class="text-white">
+        <i class="text-white fa-solid fa-location-dot"></i> <%= job.joblocation
+        %> <%= job.jobdestination %>
+      </p>
+      <p class="text-white">
+        <i class="text-white fa-sharp fa-solid fa-indian-rupee-sign"></i> <%=
+        job.salary %>
+      </p>
+      <p class="text-white">
+        <i class="text-white fa-regular fa-hourglass-half"></i> Apply by: <%=
+        new Date(job.applyby).toLocaleDateString() %>
+      </p>
+      <p class="text-white">
+        <i class="text-white fa-solid fa-signal"></i> Number of Openings <%=
+        job.numberofopenings %>
+      </p>
+      <a href="/auth/<%=job.id%>" style="color: #da3545;text-decoration:none">
+        <i class="fa-solid fa-user-group"></i> Applicants
+        <span style="color: #da3545"><%= job.applicants.length %></span>
+      </a>
+    </div>
+    <div class="skill-container">
+      <% job.skillsrequired.forEach(skill => { %>
+      <p><%= skill %></p>
+      <% }) %>
+    </div>
+    <div class="mt-4 mb-4">
+      <button
+        type="button"
+        class="btn btn-primary apply-job"
+        data-toggle="modal"
+        data-target="#exampleModalCenter"
+      >
+        Apply Now
+      </button>
+    </div>
+    <p class="date">Posted: <%= job.jobposted %></p>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">easily</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body form-container">
+        <div class="input-container">
+          <h2 style="font-size: medium">Apply in less than 1 minute</h2>
+          <form
+            action="/apply/<%=job.id%>"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="d-flex border border-darklight rounded mb-3">
+              <label for="name" class="form-label border-right p-1">Name</label>
+              <input
+                name="name"
+                type="text"
+                class="form-control p-1 border-0"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="d-flex border border-darklight rounded mb-3">
+              <label for="email" class="form-label border-right p-1"
+                >Email</label
+              >
+              <input
+                name="email"
+                type="email"
+                class="form-control p-1 border-0"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="d-flex border border-darklight rounded mb-3">
+              <label for="contact" class="form-label border-right p-1"
+                >Contact</label
+              >
+              <input
+                name="contact"
+                type="number"
+                class="form-control p-1 border-0"
+                id="contact"
+                placeholder="+91 _ _ _ _ _ _ _ _ _ _"
+                required
+              />
+            </div>
+            <div class="d-flex border border-darklight rounded mb-3">
+              <label for="file" class="form-label border-right p-1"
+                >Resume</label
+              >
+              <input
+                name="resumePath"
+                type="file"
+                class="form-control p-1 border-0"
+                id="file"
+                required
+              />
+            </div>
+            <input class="btn btn-success mb-3" type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

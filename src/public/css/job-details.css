@@ -1,0 +1,76 @@
+.navbar-head {
+  height: 3em;
+}
+.form-control {
+  height: 2.5em;
+}
+.box-container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  margin-top: 2%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.job-container {
+  border: 1px solid white;
+  border-radius: 5px;
+  /* width: 20%; */
+  /* height: auto; */
+  width: 25%;
+  padding: 6px;
+}
+.hiring {
+  padding: 3px;
+  background-color: #0e2659;
+  border: 0.5px #177955;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 70%;
+  justify-content: space-between;
+}
+.skill-container {
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.skill-container p {
+  border: 0.5px solid #0db0d8;
+  border-radius: 3px;
+  background-color: #18163d;
+  color: #0eb6e0;
+  padding: 5px;
+  margin: 3px;
+  cursor: pointer;
+}
+.skill-container p:hover {
+  background-color: #0d9bbd;
+  color: white;
+}
+
+.job-details{
+  align-items: center;
+  text-decoration: none;
+  border: 0.5px solid #177955;
+  border-radius: 3px;
+  margin: 1em;
+  padding: 5px;
+  text-align: center;
+  background-color: #0e0d23;
+  color: #177955;
+  width: 100%;
+}
+.job-details:hover {
+  background-color: #177955;
+  color: white;
+}

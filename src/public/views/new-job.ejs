@@ -1,0 +1,109 @@
+<div class="container mt-2 w-90">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">Post a new Job</h1>
+          <form action="/new-job/apply" method="post">
+            <div class="form-group">
+              <select name="jobcategory" id="job-category" class="form-control">
+                <option>select job category</option>
+                <option value="Tech">Tech</option>
+                <option value="Non Tech">Non Tech</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select
+                name="jobdestination"
+                id="job-destination"
+                class="form-control"
+              >
+                <option value="">select job destination</option>
+                <option value="HR">HR</option>
+                <option value="SDE">SDE</option>
+                <option value="DevOps">DevOps</option>
+                <option value="MERN Developer">MERN Developer</option>
+                <option value="MEAN Developer">MEAN Developer</option>
+                <option value="JAVA Developer">JAVA Developer</option>
+                <option value="Front End Developer">Front End Developer</option>
+                <option value="Back End Developer">Back End Developer</option>
+                <option value="Full Stack Developer">
+                  Full Stack Developer
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="company-name">Company Name</label>
+              <input
+                name="companyname"
+                type="text"
+                class="form-control"
+                id="company-name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="joblocation">Job Location</label>
+              <input
+                name="joblocation"
+                type="text"
+                class="form-control"
+                id="joblocation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="salary">Enter Salary</label>
+              <input
+                name="salary"
+                type="number"
+                class="form-control"
+                id="salary"
+              />
+            </div>
+            <div class="form-group">
+              <label for="positions">Total Positions</label>
+              <input
+                name="numberofopenings"
+                type="number"
+                class="form-control"
+                id="positions"
+                placeholder="Total number of openings"
+              />
+            </div>
+            <div class="form-group">
+              <select
+                name="skillsrequired"
+                id="skill"
+                multiple
+                class="form-control"
+              >
+                <option value="">select skill required for this job</option>
+                <option value="React">React</option>
+                <option value="NodeJs">NodeJs</option>
+                <option value="Angular">Angular</option>
+                <option value="MongoDB">MongoDB</option>
+                <option value="SQL">SQL</option>
+                <option value="Express">Express</option>
+                <option value="Java">Java</option>
+                <option value="SpringBoot">SpringBoot</option>
+                <option value="C++">C++</option>
+                <option value="Data Structure & Algo">
+                  Data Structure & Algo
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="apply-by">Apply By</label>
+              <input
+                name="applyby"
+                type="date"
+                class="form-control"
+                id="apply-by"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

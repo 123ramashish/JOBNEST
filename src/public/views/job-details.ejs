@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="../css/job-details.css" />
+
+<div class="box-container">
+    <% jobs.forEach(job => { %>
+  <div class="job-container">
+    <div class="hiring">
+      <h5 style="color: white">Actively hiring</h5>
+      <i style="color: #177955; font-size: 15px" class="fa-solid fa-arrow-trend-up"></i>
+    </div>
+    
+    <p style="color: #ffb613"><%= job.companyname %></p>
+    <p style="color: white">
+      <%= job.jobcategory %> <span style="color: #0d9bbd"><%= job.jobdestination %></span>
+    </p>
+    <p style="color: white">
+      <i class="fa-solid fa-location-dot"></i>&nbsp;<%= job.joblocation %>
+    </p>
+    <p style="color: white">
+      <i class="fa-solid fa-indian-rupee-sign">&nbsp;</i><%= job.salary %>
+    </p>
+    <div class="skill-container">
+      <% job.skillsrequired.forEach(skill => { %>
+      <p><%= skill %></p>
+      <% }) %>
+    </div>
+    <div class=" m-auto m-3 w-75 d-flex align-items-center ">
+    <a class="job-details" href="/jobs/<%=job.id%>">view details</a>
+    </div>
+  </div>
+    <% }) %>
+</div>

@@ -1,0 +1,23 @@
+<table style="width: 90%; margin:auto;color:white">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Resume</th>
+        </tr>
+    </thead>
+    <tbody>
+  
+        <% filteredArray.forEach((item) => { %>
+            <tr>
+                <td><%=++count%></td>
+                <td><%= item.name %></td>
+                <td><%= item.email %></td>
+                <td><%= item.contact %></td>
+                <td><%= item.resumePath %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

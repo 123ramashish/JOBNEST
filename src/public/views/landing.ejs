@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="../css/register-page.css" />
+
+<div class="container d-flex">
+  <div class="left m-auto">
+    <h1 style="color: #dc2984">A comprehensive platform for reliable</h1>
+    <h3 class="heading-tarnsition" style="color: white">
+      job opportunities and internships.
+    </h3>
+    <p style="color: white">Get Discovered. Get Hired.</p>
+    <div class="button-container">
+      <a
+        href="/jobs"
+        style="
+          text-decoration: none;
+          background-color: #dc2984;
+          padding: 6px;
+          border: none;
+          border-radius: 6px;
+          margin-right: 1em;
+          color: white;
+          font-size: 1.2em;
+          cursor: pointer;
+        "
+      >
+        I'm A Job Seeker
+      </a>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#exampleModal"
+        style="
+          background-color: #dc2984;
+          padding: 6px;
+          border: none;
+          border-radius: 6px;
+          color: white;
+          font-size: 1.2em;
+          cursor: pointer;
+        "
+      >
+        I'm A Recruiter
+      </button>
+    </div>
+  </div>
+  <div class="right">
+    <img src="https://easily-deploy.onrender.com/images/banner.png" alt="" />
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Experience easily!</h2>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container div-container">
+          <form action="/auth/register" method="post">
+            <div class="d-flex border border-darklight rounded mb-3 w-100">
+              <label for="name" class="border-right p-1">Name</label>
+              <input name="name"
+                type="text"
+                class="form-control p-1 border-0"
+                id="name"
+                placeholder="Enter your name"required
+              />
+            </div>
+            <div class="d-flex border border-darklight rounded mb-3">
+              <label for="email" class="border-right p-1">Email</label>
+              <input
+              name="email"
+                type="email"
+                class="form-control p-1 border-0"
+                id="email"
+                placeholder="Enter your email"required
+              />
+            </div>
+            <div class="d-flex border border-darklight rounded mb-3">
+              <label for="password" class="border-right p-1">Password</label>
+              <input
+              name="password"
+                type="password"
+                class="form-control p-1 border-0"
+                id="password"
+                placeholder="Enter password"required
+              />
+            </div>
+            <input style="
+          text-decoration: none;
+          background-color: #dc2984;
+          padding: 6px;
+          border: none;
+          border-radius: 6px;
+          margin-right: 1em;
+          color: white;
+          font-size: 1.2em;
+          cursor: pointer;
+        "
+              type="submit"
+              class="mb-2" value="Register"
+              
+            />
+          </form>
+
+          <div class="d-flex border-top">
+            <div class="d-flex mt-3 mb-3">
+              <h5>Already registered?</h5>
+              <a href="/login" class="ml-2 login-btn">Login</a>
+            </div>
+            <div class="d-flex mt-4 ml-3">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

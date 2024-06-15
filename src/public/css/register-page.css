@@ -1,0 +1,45 @@
+.submit-btn {
+  text-decoration: none;
+  padding: 4px;
+  background-color: #ed2b8f !important;
+  color: white !important;
+}
+.submit-btn:hover {
+  background-color: #a51d63 !important;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+}
+.login-btn {
+  text-decoration: none !important;
+  padding: 2px !important;
+  border: 1px solid #177955 !important ;
+  color: #177955 !important;
+  text-align: center;
+}
+.login-btn:hover {
+  background-color: #177955 !important;
+  color: white !important;
+}
+i {
+  float: right !important;
+  font-size: 25px !important;
+  margin-left: 6px !important;
+}
+
+.fa-twitter {
+  color: #1da1f2 !important;
+}
+.fa-instagram {
+  color: #cd486b !important;
+}
+.fa-facebook {
+  color: #316ff6 !important;
+}
+.fa-whatsapp {
+  color: #075e54 !important;
+}
+.fa-linkedin {
+  color: #0a66c2 !important;
+}
